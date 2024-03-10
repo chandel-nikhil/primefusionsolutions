@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<!-- <!DOCTYPE html>
+<html <?php // language_attributes(); 
+        ?>>
 
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta charset="<?php // bloginfo('charset'); 
+                    ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php wp_title(); ?></title>
-    <?php wp_head(); ?>
+    <title><?php // wp_title(); 
+            ?></title>
+    <?php // wp_head(); 
+    ?>
 </head>
 
-<body class="sub_page" <?php body_class(); ?>>
+<body class="sub_page" <?php // body_class(); 
+                        ?>>
 
     <div class="hero_area">
 
@@ -18,14 +23,21 @@
             </div>
         </div>
 
-        <!-- header section strats -->
+
         <header class="header_section">
-            <?php if (has_custom_logo()) : ?>
-                <div class="site-logo"><?php the_custom_logo(); ?></div>
-            <?php else : ?>
-                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
-                <p class="site-description"><?php bloginfo('description'); ?></p>
-            <?php endif; ?>
+            <?php // if (has_custom_logo()) : 
+            ?>
+                <div class="site-logo"><?php // the_custom_logo(); 
+                                        ?></div>
+            <?php // else : 
+            ?>
+                <h1 class="site-title"><a href="<?php // echo esc_url(home_url('/')); 
+                                                ?>"><?php // bloginfo('name'); 
+                                                    ?></a></h1>
+                <p class="site-description"><?php // bloginfo('description'); 
+                                            ?></p>
+            <?php // endif; 
+            ?>
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
 
@@ -35,7 +47,7 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
-                            <?php
+                            <?php //
                             // wp_nav_menu(array(
                             //     'theme_location' => 'primary',
                             //     'menu_id' => 'primary-menu',
@@ -58,6 +70,6 @@
                 </nav>
             </div>
         </header>
-        <!-- end header section -->
-    </div>
-    <?php get_header(); ?>
+
+    </div> -->
+<?php get_header(); ?>
