@@ -44,7 +44,6 @@
                                 'container' => '', // Remove outer container
                                 'items_wrap' => '%3$s', // Wrap items directly in <ul>, no outer container
                                 'depth' => 2, // Set depth to 2 levels
-                                'walker' => new Custom_Nav_Walker() // Use custom walker class if needed
                             ));
                             ?>
                             <li class="nav-item ">
