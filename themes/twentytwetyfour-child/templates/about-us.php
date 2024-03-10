@@ -4,6 +4,7 @@
  * Description: about us page template
  */
 ?>
+<?php get_header(); ?>
 <div class="hero_area">
 
     <div class="hero_bg_box">
