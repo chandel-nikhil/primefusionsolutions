@@ -30,12 +30,6 @@
             <?php endif; ?>
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
-                    <?php
-                    die(wp_nav_menu(array(
-                        'theme_location' => 'primary',
-                        'menu_id' => 'primary-menu',
-                    )));
-                    ?>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class=""> </span>
@@ -43,6 +37,16 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ">
+                            <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'primary',
+                                'menu_id' => 'primary-menu',
+                                'container' => '', // Remove outer container
+                                'items_wrap' => '%3$s', // Wrap items directly in <ul>, no outer container
+                                'depth' => 2, // Set depth to 2 levels
+                                'walker' => new Custom_Nav_Walker() // Use custom walker class if needed
+                            ));
+                            ?>
                             <li class="nav-item ">
                                 <a class="nav-link" href="index.html">Home </a>
                             </li>
