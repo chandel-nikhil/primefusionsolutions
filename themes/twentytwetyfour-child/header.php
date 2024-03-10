@@ -36,12 +36,12 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav">
                             <?php
-                            wp_nav_menu(array(
-                                'theme_location' => 'primary',
-                                'menu_id' => 'primary-menu',
-                                'container' => 'nav',
-                                'name'  => 'top-menu',
-                            ));
+                            // wp_nav_menu(array(
+                            //     'theme_location' => 'primary',
+                            //     'menu_id' => 'primary-menu',
+                            //     'container' => 'nav',
+                            //     'name'  => 'top-menu',
+                            // ));
                             ?>
 
                             <li class="nav-item active">
