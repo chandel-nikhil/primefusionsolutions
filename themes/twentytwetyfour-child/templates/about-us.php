@@ -7,14 +7,6 @@
 <?php get_header(); ?>
 
 <!-- about section -->
-<div class="hero_area">
-    <div class="hero_bg_box">
-        <div class="bg_img_box">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hero-bg.png" alt="">
-        </div>
-    </div>
-</div>
-
 <section class="about_section layout_padding">
     <div class="container  ">
         <div class="heading_container heading_center">
