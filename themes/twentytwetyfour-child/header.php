@@ -36,12 +36,13 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav  ">
+                        <ul class="navbar-nav">
                             <?php
                             wp_nav_menu(array(
                                 'theme_location' => 'primary',
                                 'menu_id' => 'primary-menu',
                                 'container' => 'ul',
+                                'menu_class' => 'nav-item',
                             ));
                             ?>
 
