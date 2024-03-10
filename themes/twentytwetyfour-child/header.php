@@ -41,9 +41,8 @@
                             wp_nav_menu(array(
                                 'theme_location' => 'primary',
                                 'menu_id' => 'primary-menu',
-                                'container' => '', // Remove outer container
-                                'items_wrap' => '%3$s', // Wrap items directly in <ul>, no outer container
-                                'depth' => 2, // Set depth to 2 levels
+                                'container' => 'ul',
+                                'menu_class' => 'nav-link'
                             ));
                             ?>
                             <li class="nav-item ">
