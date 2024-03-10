@@ -5,7 +5,7 @@
  */
 ?>
 <?php get_header(); ?>
-<div>
+<div class="hero_area">
 
     <div class="hero_bg_box">
         <div class="bg_img_box">
