@@ -45,7 +45,7 @@
                                 'name'  => 'top-menu',
                             ));
 
-                            dd(wp_get_nav_menu_items('primary-menu'));
+                            die(wp_get_nav_menu_items('primary-menu'));
                             ?>
 
                             <li class="nav-item active">
