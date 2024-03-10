@@ -38,30 +38,30 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ">
                             <?php
-                            wp_nav_menu(array(
-                                'theme_location' => 'primary',
-                                'menu_id' => 'primary-menu',
-                                'container' => 'ul',
-                                'menu_class' => 'nav-link'
-                            ));
+                            // wp_nav_menu(array(
+                            //     'theme_location' => 'primary',
+                            //     'menu_id' => 'primary-menu',
+                            //     'container' => 'ul',
+                            //     'menu_class' => 'nav-link'
+                            // ));
+                            $menu_items = wp_get_nav_menu_items('primary');
+
+                            if ($menu_items) {
+                                foreach ($menu_items as $menu_item) {
+                                    // Access menu item properties
+                                    $title = $menu_item->title;
+                                    $url = $menu_item->url;
+                                    $classes = $menu_item->classes;
                             ?>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="index.html">Home </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html"> About</a>
-                            </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link <?php echo $menu_item->classes; ?>" href="<?php echo $url; ?>"><?php echo $title; ?><span class="sr-only">(current)</span> </a>
+                                    </li>
+                            <?php
+                                }
+                            }
+                            ?>
                             <li class="nav-item active">
                                 <a class="nav-link" href="service.html">Services <span class="sr-only">(current)</span> </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="why.html">Why Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="team.html">Team</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
                             </li>
                             <form class="form-inline">
                                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
