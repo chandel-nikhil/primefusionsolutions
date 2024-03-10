@@ -8,8 +8,6 @@
     <?php wp_head(); ?>
 </head>
 
-<?php get_header(); ?>
-
 <body class="sub_page" <?php body_class(); ?>>
 
     <div class="hero_area">
@@ -62,3 +60,4 @@
         </header>
         <!-- end header section -->
     </div>
+    <?php get_header(); ?>
