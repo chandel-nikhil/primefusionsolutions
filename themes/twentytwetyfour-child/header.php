@@ -52,11 +52,7 @@
                                     $title = $menu_item->title;
                                     $url = $menu_item->url;
                                     $classes = $menu_item->classes;
-                            ?>
-                                    <li class="nav-item active">
-                                        <a class="nav-link <?php echo $menu_item->classes; ?>" href="<?php echo $url; ?>"><?php echo $title; ?><span class="sr-only">(current)</span> </a>
-                                    </li>
-                            <?php
+                                    echo $title;
                                 }
                             }
                             ?>
