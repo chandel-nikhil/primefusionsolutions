@@ -6,7 +6,7 @@
 ?>
 <?php
 // Get the header file path from the parent theme
-$parent_header = get_template_directory() . '/header.php';
+$parent_header = get_template_directory() . '/parts/header.html';
 
 // Check if the parent header file exists
 if (file_exists($parent_header)) {
