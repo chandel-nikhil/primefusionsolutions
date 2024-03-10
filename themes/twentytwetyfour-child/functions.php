@@ -47,3 +47,9 @@ function enqueue_custom_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
+add_theme_support( 'menus' );
+function register_my_menu() {
+    register_nav_menu( 'new-menu', __( 'New Menu' ) );
+}
+add_action( 'init', 'register_my_menu' );
+
