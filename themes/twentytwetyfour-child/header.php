@@ -31,10 +31,10 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
                     <?php
-                    wp_nav_menu(array(
+                    die(wp_nav_menu(array(
                         'theme_location' => 'primary',
                         'menu_id' => 'primary-menu',
-                    ));
+                    )));
                     ?>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
