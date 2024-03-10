@@ -41,9 +41,11 @@
                             wp_nav_menu(array(
                                 'theme_location' => 'primary',
                                 'menu_id' => 'primary-menu',
-                                'container' => 'ul',
-                                'menu_class' => 'nav-item',
+                                'container' => 'nav',
+                                'name'  => 'top-menu',
                             ));
+
+                            dd(wp_get_nav_menu_items('primary-menu'));
                             ?>
 
                             <li class="nav-item active">
