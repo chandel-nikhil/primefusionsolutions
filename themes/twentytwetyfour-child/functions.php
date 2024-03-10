@@ -33,17 +33,17 @@ function enqueue_custom_scripts() {
     wp_enqueue_script('popper-js', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', array(), '', true);
 
     // Bootstrap JS
-    wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '', true);
+    wp_enqueue_script('bootstrap-js', get_stylesheet_directory_uri()  . '/js/bootstrap.js', array('jquery'), '', true);
 
     // Owl Carousel JS
     wp_enqueue_script('owl-carousel-js', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js', array(), '', true);
 
     // Custom JS
-    wp_enqueue_script('custom-js', get_template_directory_uri() . '/js/custom.js', array(), '', true);
+    wp_enqueue_script('custom-js', get_stylesheet_directory_uri()  . '/js/custom.js', array(), '', true);
 
     // Google Map (assuming myMap is a function defined in custom.js)
     // Note: Ensure you handle the API key properly, this example doesn't include it
-    wp_enqueue_script('google-map', 'https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap', array(), '', true);
+    // wp_enqueue_script('google-map', 'https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=myMap', array(), '', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 
