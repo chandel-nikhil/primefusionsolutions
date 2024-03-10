@@ -10,7 +10,7 @@
 <div class="hero_area">
     <div class="hero_bg_box">
         <div class="bg_img_box">
-            <img src="<?php echo get_template_directory_uri(); ?>images/hero-bg.png" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/hero-bg.png" alt="">
         </div>
     </div>
 </div>
@@ -28,7 +28,7 @@
         <div class="row">
             <div class="col-md-6 ">
                 <div class="img-box">
-                    <img src="<?php echo get_template_directory_uri(); ?>images/about-img.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/about-img.png" alt="">
                 </div>
             </div>
             <div class="col-md-6">
