@@ -38,27 +38,17 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ">
                             <?php
-                            // wp_nav_menu(array(
-                            //     'theme_location' => 'primary',
-                            //     'menu_id' => 'primary-menu',
-                            //     'container' => 'ul',
-                            //     'menu_class' => 'nav-link'
-                            // ));
-                            $menu_items = wp_get_nav_menu_items('primary-menu');
-
-                            if ($menu_items) {
-                                foreach ($menu_items as $menu_item) {
-                                    // Access menu item properties
-                                    $title = $menu_item->title;
-                                    $url = $menu_item->url;
-                                    $classes = $menu_item->classes;
-                                    echo $title;
-                                }
-                            }
+                            wp_nav_menu(array(
+                                'theme_location' => 'primary',
+                                'menu_id' => 'primary-menu',
+                                'container' => 'ul',
+                            ));
                             ?>
+
                             <li class="nav-item active">
                                 <a class="nav-link" href="service.html">Services <span class="sr-only">(current)</span> </a>
                             </li>
+
                             <form class="form-inline">
                                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
