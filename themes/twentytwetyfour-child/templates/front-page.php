@@ -4,7 +4,19 @@
  * Description: Custom template for single posts
  */
 ?>
-<?php get_header(); ?>
+<?php
+// Get the header file path from the parent theme
+$parent_header = get_template_directory() . '/header.php';
+
+// Check if the parent header file exists
+if (file_exists($parent_header)) {
+    // Include the parent header
+    include_once $parent_header;
+} else {
+    // If the parent header doesn't exist, fall back to the child theme's header
+    get_header();
+}
+?>
 
 <div class="hero_area">
 
