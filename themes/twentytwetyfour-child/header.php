@@ -45,7 +45,27 @@
                                 'name'  => 'top-menu',
                             ));
 
-                            die(wp_get_nav_menu_items('primary-menu'));
+
+                            $locations = get_nav_menu_locations();
+                            $menu = wp_get_nav_menu_object($locations['top-menu']);
+                            $menuitems = wp_get_nav_menu_items($menu->term_id, array('order' => 'DESC'));
+
+                            foreach ($menuitems as $item) :
+
+                                $id = get_post_meta($item->ID, '_menu_item_object_id', true);
+                                $page = get_page($id);
+                                $link = get_page_link($id); ?>
+
+                                <li class="item">
+                                    <a href="<?php echo $link; ?>" class="title">
+                                        <?php echo $page->post_title; ?>
+                                    </a>
+                                    <a href="<?php echo $link; ?>" class="desc">
+                                        <?php echo $page->post_excerpt; ?>
+                                    </a>
+                                </li>
+
+                            <?php endforeach;
                             ?>
 
                             <li class="nav-item active">
