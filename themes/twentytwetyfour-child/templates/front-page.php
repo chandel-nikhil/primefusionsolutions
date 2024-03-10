@@ -131,7 +131,7 @@ if (file_exists($parent_header)) {
         <div class="container ">
             <div class="heading_container heading_center">
                 <h2>
-                    Our <span>Services</span>
+                    <span>Our Services</span>
                 </h2>
                 <p>
                     There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
