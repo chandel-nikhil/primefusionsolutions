@@ -44,7 +44,7 @@
                             //     'container' => 'ul',
                             //     'menu_class' => 'nav-link'
                             // ));
-                            $menu_items = wp_get_nav_menu_items('primary');
+                            $menu_items = wp_get_nav_menu_items('primary-menu');
 
                             if ($menu_items) {
                                 foreach ($menu_items as $menu_item) {
