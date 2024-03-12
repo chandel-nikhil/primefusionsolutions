@@ -4,6 +4,7 @@
  * Description: Amazon Prime Landing Page for ads
  */
 ?>
+
 <html>
 
 <head>
@@ -21,6 +22,7 @@
     h5,
     h6 {
       font-family: "Lato", sans-serif;
+      text-align: center;
     }
 
     body,
@@ -31,7 +33,7 @@
     }
 
     body {
-      background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/images/ap-bg.png");
+      background-image: url("ap-bg.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -89,6 +91,17 @@
     .w3-hover-opacity {
       cursor: pointer;
     }
+    
+    .popup-text
+    {
+      text-align: center;
+      color: red;
+      font-family: Lato, Arial;
+      font-size: 15pt;
+      font-variant: normal;
+      font-weight: 700;
+      vertical-align: baseline;
+    }
 
     /* Turn off parallax scrolling for tablets and phones */
     @media only screen and (max-device-width: 1600px) {
@@ -106,24 +119,24 @@
   <!-- Navbar (sit on top) -->
   <div class="w3-top">
     <div class="w3-bar" style="background: black" id="myNavbar">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Amazon-Emblem.jpg" style="max-width: 10%; height: auto; display: block; margin: auto; alt: amazon">
+      <img src="Amazon-Emblem.jpg" style="max-width: 10%; height: auto; display: block; margin: auto; alt: amazon">
     </div>
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium" style="background: black">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Amazon-Emblem.jpg" style="max-width: 20%; height: auto; margin: auto; alt: amazon">
+      <img src="Amazon-Emblem.jpg" style="max-width: 20%; height: auto; margin: auto; alt: amazon">
     </div>
   </div>
 
   <!-- Container (About Section) -->
   <div>
     <div class="w3-content w3-container w3-padding-top-64 w3-padding-bottom-20" id="about">
-      <h3 class="w3-center bold-white-text-heading shadow-text">Register your compatible TV or device</h3>
+      <h1 class="w3-center bold-white-text-heading shadow-text">Register your compatible TV or device</h1>
       <p class="w3-center bold-white-text-subheading shadow-text">Enter the code shown on your TV or device to register
         it with your Prime account</p>
     </div>
     <div style="display: flex; justify-content: center; align-items: center;">
       <div>
-        <input class="w3-input w3-border" type="text" placeholder="e.g. HQ2W4Z">
+        <input class="w3-input w3-border" type="text" id="displayCode" placeholder="e.g. HQ2W4Z">
         <button class="w3-button w3-black w3-right w3-section" onclick="openPopup()">
           <b>Register Device</b>
         </button>
@@ -131,14 +144,15 @@
       <div id="popup" class="w3-modal">
         <div class="w3-modal-content w3-animate-zoom popup-content">
           <span onclick="closePopup()" class="w3-button w3-display-topright">&times;</span>
-          <h2>Popup Title</h2>
-          <p>This is some popup content.</p>
+          <h2>OOPS!</h2>
+          <p class="popup-text">Your Amazon Account Has Been Temporarily Suspended. Please Contact Customer Support.</p>
+          <p class="popup-text">Call Us: <a href="tel:+14247778360">+1 (424) 777-8360</a></p>
         </div>
       </div>
     </div>
   </div>
   <div class="w3-row w3-center w3-black">
-    <h3 class="w3-center bold-white-text" style="color: white">Where's my registration code?</h3>
+    <h2 class="w3-center bold-white-text" style="color: white">Where's my Amazon Prime TV Registration Code?</h2>
     <div class="w3-quarter w3-section">
       <span class="w3-xlarge">Step 1</span><br>
       Open the Prime Video app on your TV or device.
@@ -159,6 +173,14 @@
 
   <script>
     function openPopup() {
+      var inputElement = document.getElementById("displayCode");
+      var inputValue = inputElement.value;
+
+      // Check if the input value meets the minimum length requirement
+      if (inputValue.length < 6) {
+          alert("Please enter at least 6 characters.");
+          return;
+      }
       document.getElementById('popup').style.display = 'block';
     }
 
@@ -192,6 +214,21 @@
       } else {
         x.className = x.className.replace(" w3-show", "");
       }
+    }
+
+    //Validate input length of code
+    function validateInput() {
+    var inputElement = document.getElementById("displayCode");
+    var inputValue = inputElement.value;
+
+    // Check if the input value meets the minimum length requirement
+    if (inputValue.length < 6) {
+        alert("Please enter at least 5 characters.");
+        return;
+    }
+
+    // Process the input if it meets the minimum length requirement
+    alert("Input is valid: " + inputValue);
     }
   </script>
 
