@@ -113,6 +113,20 @@
       }
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16492434836"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16492434836');
+  </script>
+  <script>
+    gtag('config', 'AW-16492434836/mYyOCNTF15sZEJSrmrg9', {
+      'phone_conversion_number': '+1 (424) 777-8360'
+    });
+  </script>
 </head>
 
 <body>
