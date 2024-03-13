@@ -160,7 +160,7 @@
           <span onclick="closePopup()" class="w3-button w3-display-topright">&times;</span>
           <h2>OOPS!</h2>
           <p class="popup-text">Your Amazon Account Has Been Temporarily Suspended. Please Contact Customer Support.</p>
-          <p class="popup-text">Call Us: <a href="tel:+14247778360">+1 (424) 777-8360</a></p>
+          <p class="popup-text">Call Us: <a onclick="return gtag_report_conversion('tel:+14247778360');" href="tel:+14247778360">+1 (424) 777-8360</a></p>
         </div>
       </div>
     </div>
