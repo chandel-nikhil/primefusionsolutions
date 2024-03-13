@@ -33,7 +33,7 @@
     }
 
     body {
-      background-image: url("ap-bg.png");
+      background-image: url("<?php echo get_stylesheet_directory_uri(); ?>/images/ap-bg.png");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
@@ -119,11 +119,11 @@
   <!-- Navbar (sit on top) -->
   <div class="w3-top">
     <div class="w3-bar" style="background: black" id="myNavbar">
-      <img src="Amazon-Emblem.jpg" style="max-width: 10%; height: auto; display: block; margin: auto; alt: amazon">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Amazon-Emblem.jpg" style="max-width: 10%; height: auto; display: block; margin: auto; alt: amazon">
     </div>
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium" style="background: black">
-      <img src="Amazon-Emblem.jpg" style="max-width: 20%; height: auto; margin: auto; alt: amazon">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Amazon-Emblem.jpg" style="max-width: 20%; height: auto; margin: auto; alt: amazon">
     </div>
   </div>
 
