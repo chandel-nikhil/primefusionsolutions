@@ -11,6 +11,8 @@
   <title>W3.CSS Template</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activate Amazon Prime TV & Devices</title>
+    <meta name="description" content="Activate your Amazon Prime TV & Devices with registration code in 4 easy steps.">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <style>
@@ -112,6 +114,12 @@
         min-height: 400px;
       }
     }
+
+    p,
+    h1
+    {
+      line-height: 1.25;
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16492434836"></script>
@@ -160,7 +168,7 @@
   <!-- Container (About Section) -->
   <div>
     <div class="w3-content w3-container w3-padding-top-64 w3-padding-bottom-20" id="about">
-      <h1 class="w3-center bold-white-text-heading shadow-text">Register your compatible TV or device</h1>
+      <h1 class="w3-center bold-white-text-heading shadow-text">Activate your Amazon Prime TV or device</h1>
       <p class="w3-center bold-white-text-subheading shadow-text">Enter the code shown on your TV or device to register
         it with your Prime account</p>
     </div>
